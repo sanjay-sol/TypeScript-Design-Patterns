@@ -23,6 +23,10 @@ function createDatabase<T extends BaseRecord>() {
   class InMemoryDatabase implements Database<T> {
     private db: Record<string, T> = {};
 
+    static instance: InMemoryDatabase = new InMemoryDatabase();
+
+    private constructor() {}
+
     public set(newValue: T): void {
       this.db[newValue.id] = newValue;
     }
@@ -30,8 +34,9 @@ function createDatabase<T extends BaseRecord>() {
       return this.db[id];
     }
   }
-    const dB = new InMemoryDatabase();
-  return dB;
+  // const dB = new InMemoryDatabase();
+  //   return dB;
+  return InMemoryDatabase;
 }
 
 const pokemonDB = createDatabase<Pokemon>();
