@@ -52,3 +52,25 @@ pokemonDB.instance.set({
 pokemonDB.instance.visit((item) => {
   console.log(item);
 });
+
+
+//! Strategy Pattern
+
+// import { pokemonDB } from "./strategy-Pattern";
+
+// pokemonDB.instance.set({
+//   id: "Pikachu",
+//   attack: 55,
+//   defense: 40,
+// });
+
+// pokemonDB.instance.set({
+//   id: "Bulbasaur",
+//   attack: 49,
+//   defense: 49,
+// });
+
+// const bestDefender = pokemonDB.instance.selectBest((item) => item.defense);
+// console.log(bestDefender);
+// const bestAttacker = pokemonDB.instance.selectBest((item) => item.attack);
+// console.log(bestAttacker);
