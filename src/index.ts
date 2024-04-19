@@ -1,4 +1,4 @@
-//! Singleton Pattern
+// ! Singleton Pattern
 // import { pokemonDB } from "./singleton-pattern";
 
 // pokemonDB.instance.set({
@@ -10,7 +10,7 @@
 // console.log(pokemonDB.instance.get("Pikachu"));
 // console.log(pokemonDB.instance.get("Bulbasaur"));
 
-//! Observer Pattern or PubSub Pattern
+// ! Observer Pattern or PubSub Pattern
 
 // import { pokemonDB } from "./pubSub-Pattern";
 
@@ -31,3 +31,24 @@
 //   attack: 49,
 //   defense: 49,
 // });
+
+
+//! Visitor Pattern
+
+import { pokemonDB } from "./visitor-Pattern";
+
+pokemonDB.instance.set({
+  id: "Pikachu",
+  attack: 55,
+  defense: 40,
+});
+
+pokemonDB.instance.set({
+  id: "Bulbasaur",
+  attack: 49,
+  defense: 49,
+});
+
+pokemonDB.instance.visit((item) => {
+  console.log(item);
+});
