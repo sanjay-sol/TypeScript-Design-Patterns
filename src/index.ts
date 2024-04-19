@@ -1,4 +1,4 @@
-import { pokemonDB } from "./factory-Pattern";
+import { pokemonDB } from "./singleton-pattern";
 
 pokemonDB.set({
     id: "Pikachu",
